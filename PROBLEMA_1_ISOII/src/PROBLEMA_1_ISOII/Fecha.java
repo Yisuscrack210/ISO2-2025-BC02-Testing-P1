@@ -10,7 +10,7 @@ public class Fecha {
 
 	private void setAnio(int anio) {
 		if (anio < 0) {
-			throw new IllegalArgumentException("El a�o no puede ser negativo.");
+			throw new IllegalArgumentException("El año no puede ser negativo.");
 		}
 		this.anio =anio;
 	}
