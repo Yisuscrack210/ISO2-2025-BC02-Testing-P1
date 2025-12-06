@@ -16,9 +16,9 @@ public class main {
 			boolean esBisiesto = fecha.esBisiesto();
 
 			if (esBisiesto) {
-				io.escribir("El año " + fecha.getAño() + " es bisiesto.");
+				io.escribir("El año " + fecha.getAnio() + " es bisiesto.");
 			} else {
-				io.escribir("El año " + fecha.getAño() + " no es bisiesto.");
+				io.escribir("El año " + fecha.getAnio() + " no es bisiesto.");
 			}
 
 		} catch (NumberFormatException e) {
