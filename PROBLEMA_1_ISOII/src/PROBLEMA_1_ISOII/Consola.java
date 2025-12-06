@@ -22,7 +22,7 @@ public class Consola {
 			return Integer.parseInt(entrada);
 		} catch (NumberFormatException e) {
 
-			throw new NumberFormatException("Error: La entrada '" + entrada + "' contiene caracteres no v·lidos.");
+			throw new NumberFormatException("Error: La entrada '" + entrada + "' contiene caracteres no v√°lidos.");
 		}
 	}
 
@@ -31,7 +31,7 @@ public class Consola {
 		try {
 			return Double.parseDouble(scanner.nextLine());
 		} catch (NumberFormatException e) {
-			throw new NumberFormatException("Error: Entrada no v·lida para un n˙mero decimal.");
+			throw new NumberFormatException("Error: Entrada no v√°lida para un n√∫mero decimal.");
 		}
 	}
 
