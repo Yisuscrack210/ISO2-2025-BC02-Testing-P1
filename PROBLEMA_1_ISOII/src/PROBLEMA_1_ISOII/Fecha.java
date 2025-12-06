@@ -2,24 +2,24 @@ package PROBLEMA_1_ISOII;
 
 public class Fecha {
 
-	private int año;
+	private int anio;
 
-	public Fecha(int año) {
-		this.setAño(año);
+	public Fecha(int anio) {
+		this.setAnio(anio);
 	}
 
-	private void setAño(int año) {
-		if (año < 0) {
-			throw new IllegalArgumentException("El año no puede ser negativo.");
+	private void setAnio(int anio) {
+		if (anio < 0) {
+			throw new IllegalArgumentException("El aï¿½o no puede ser negativo.");
 		}
-		this.año = año;
+		this.anio = anio;
 	}
 
-	public int getAño() {
-		return año;
+	public int getAnio() {
+		return anio;
 	}
 
 	public boolean esBisiesto() {
-		return (this.año % 4 == 0) && ((this.año % 100 != 0) || (this.año % 400 == 0));
+		return (this.anio % 4 == 0) && ((this.anio % 100 != 0) || (this.anio % 400 == 0));
 	}
 }
