@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Consola.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Problema1_p3</a> &gt; <a href="index.source.html" class="el_package">PROBLEMA_1_ISOII</a> &gt; <span class="el_source">Consola.java</span></div><h1>Consola.java</h1><pre class="source lang-java linenums">package PROBLEMA_1_ISOII;
+
+import java.util.Scanner;
+
+public class Consola {
+
+	private final Scanner scanner;
+
+<span class="fc" id="L9">	public Consola() {</span>
+<span class="fc" id="L10">		this.scanner = new Scanner(System.in);</span>
+<span class="fc" id="L11">	}</span>
+
+	public void escribir(Object mensaje) {
+<span class="fc" id="L14">		System.out.println(mensaje);</span>
+<span class="fc" id="L15">	}</span>
+
+	public int leerInt(String mensaje) throws NumberFormatException {
+<span class="fc" id="L18">		this.escribir(mensaje);</span>
+<span class="fc" id="L19">		String entrada = scanner.nextLine();</span>
+
+		try {
+<span class="fc" id="L22">			return Integer.parseInt(entrada);</span>
+<span class="fc" id="L23">		} catch (NumberFormatException e) {</span>
+
+<span class="fc" id="L25">			throw new NumberFormatException(&quot;Error: La entrada '&quot; + entrada + &quot;' contiene caracteres no válidos.&quot;);</span>
+		}
+	}
+
+	public double leerDouble(String mensaje) {
+<span class="fc" id="L30">		this.escribir(mensaje);</span>
+		try {
+<span class="fc" id="L32">			return Double.parseDouble(scanner.nextLine());</span>
+<span class="fc" id="L33">		} catch (NumberFormatException e) {</span>
+<span class="fc" id="L34">			throw new NumberFormatException(&quot;Error: Entrada no válida para un número decimal.&quot;);</span>
+		}
+	}
+
+	public String leerCadena(String mensaje) {
+<span class="fc" id="L39">		this.escribir(mensaje);</span>
+<span class="fc" id="L40">		return scanner.nextLine();</span>
+
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

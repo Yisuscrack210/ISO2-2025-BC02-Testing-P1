@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Fecha.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Problema1_p3</a> &gt; <a href="index.source.html" class="el_package">PROBLEMA_1_ISOII</a> &gt; <span class="el_source">Fecha.java</span></div><h1>Fecha.java</h1><pre class="source lang-java linenums">package PROBLEMA_1_ISOII;
+
+public class Fecha {
+
+	private int anio;
+
+<span class="fc" id="L7">	public Fecha(int anio) {</span>
+<span class="fc" id="L8">		this.setAnio(anio);</span>
+<span class="fc" id="L9">	}</span>
+
+	private void setAnio(int anio) {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">		if (anio &lt; 0) {</span>
+<span class="fc" id="L13">			throw new IllegalArgumentException(&quot;El año no puede ser negativo.&quot;);</span>
+		}
+<span class="fc" id="L15">		this.anio =anio;</span>
+<span class="fc" id="L16">	}</span>
+
+	public int getAnio() {
+<span class="fc" id="L19">		return anio;</span>
+	}
+
+	public boolean esBisiesto() {
+<span class="fc bfc" id="L23" title="All 6 branches covered.">		return (this.anio % 4 == 0) &amp;&amp; ((this.anio % 100 != 0) || (this.anio % 400 == 0));</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
